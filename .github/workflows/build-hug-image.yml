@@ -41,7 +41,7 @@ jobs:
           context: .
           push: true
           tags: |
-            ghcr.io/${{ github.repository_owner }}/nhvle:latest
+            ghcr.io/${echo ${{ github.repository }} | tr '[:upper:]' '[:lower:]'}/nhvle:latest
           labels: |
             org.opencontainers.image.source=https://github.com/${{ github.repository }}
             org.opencontainers.image.description=http server
